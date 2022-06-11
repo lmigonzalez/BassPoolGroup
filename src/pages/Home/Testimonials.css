@@ -1,0 +1,25 @@
+.testimonials-container{
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	max-width: 1200px;
+}
+
+.testimonials-btn button{
+	background-color: #47B5FF;
+}
+
+.testimonials-btn button:hover, .testimonials-btn button:focus{
+	background-color: #47B5FF;
+}
+
+.testimonials-btn button{
+	margin: 1rem;
+	text-align: center;
+	padding: 0.5rem;
+}
+
+.testimonials-btn .icon{
+	font-size: 1.5rem;
+	color: #000;
+}
+

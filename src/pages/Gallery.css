@@ -1,0 +1,24 @@
+.gallery-container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pics-section{
+	margin: 0 auto;
+	padding: 0 1rem;
+	width: 100%;
+	/* background-color: aquamarine; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pics{
+	width:30%;
+	margin: 0.2rem;
+}
