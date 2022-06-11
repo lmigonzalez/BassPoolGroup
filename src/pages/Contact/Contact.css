@@ -1,0 +1,27 @@
+
+
+.form-container{
+	margin: 0 auto;
+	margin-top: 5rem;
+	padding: 2rem 1rem;
+	max-width: 1200px;
+}
+
+form{
+
+	margin: 0 auto;
+	max-width: 600px;
+	text-align: start;
+	/* background-color: aqua; */
+}
+
+.form-container button{
+	padding: 0.5rem 1rem;
+	background-color: #F32424;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.form-container button:hover, .form-container button:focus{
+	background-color: #F32424;
+}

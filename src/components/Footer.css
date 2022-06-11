@@ -1,8 +1,10 @@
 
 
 footer{
+	width: 100%;
 	padding: 2rem 1rem;
 	background-color: #47B5FF;
+	color: #fff;
 
 }
 
@@ -17,15 +19,28 @@ hr{
 	margin: 2rem 0;
 }
 
-.nav-links{
+.footer-links{
 	margin:  0 auto;
+	display: flex;
+	align-items: center;
 }
 
 .footer-nav a{
-	color: #000;
+	color: #fff;
 
 }
 
 .footer-contact a{
-	color: #F32424;
+	color: #fff;
+}
+
+.footer-nav li{
+	margin: 0 1rem;
+	list-style: none;
+	font-size: 1.3rem;
+  }
+
+  .footer-nav a{
+	text-decoration: none;
+	color: #fff;
 }

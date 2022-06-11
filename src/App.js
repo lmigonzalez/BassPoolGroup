@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/Header';
 import Home from './pages/Home/Home';
+import GalleryPage from './pages/Gallery/GalleryPage'
+import Contact from './pages/Contact/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,7 +15,10 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
+        <Route path='/gallery' element={<GalleryPage/>}></Route>
+        <Route path='/contactus' element={<Contact/>}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }

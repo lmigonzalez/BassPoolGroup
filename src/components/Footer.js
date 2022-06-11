@@ -9,7 +9,7 @@ function Footer() {
 		<div>
 			<h2>Bass Pool Group</h2>
 			<div className='footer-nav'>
-				<ul className='nav-links'>
+				<ul className='footer-links'>
 					<li> <Link to='/'>Home</Link> </li>
 					<li> <Link to='/'>Gallery</Link> </li>
 					<li> <Link to='/'>Services</Link> </li>

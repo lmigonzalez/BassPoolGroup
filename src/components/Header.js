@@ -6,16 +6,17 @@ import './Header.css'
 function Header() {
   return (
 	<nav>
-		<h2>Bass Pool Group</h2>
-		<ul className='nav-links'>
-			<li> <Link to='/'>Home</Link> </li>
-			<li> <Link to='/'>Gallery</Link> </li>
-			<li> <Link to='/'>Services</Link> </li>
-			<li> <Link to='/'>About Us</Link> </li>
-			<li> <Link to='/'>Contact Us</Link> </li>
-		</ul>
-
-
+		<div className='nav-container'>
+			<h2>Bass Pool Group</h2>
+			<ul className='nav-links'>
+				<li> <Link to='/'>Home</Link> </li>
+				<li> <Link to='/gallery'>Gallery</Link> </li>
+				<li> <Link to='/'>Services</Link> </li>
+				<li> <Link to='/'>About Us</Link> </li>
+				<li> <Link to='/contactus'>Contact Us</Link></li>
+			</ul>
+		</div>
+	
 	</nav>
   )
 }
