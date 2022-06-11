@@ -60,7 +60,7 @@ function Testimonials() {
   return (
 	<section className='testimonials-container'>
 		<h2>Trusted by hundreds over years</h2>
-		<p>We have hundreds of satisfied clients. Their testimonials speak for themselves.</p>
+		<h4>We have hundreds of satisfied clients. Their testimonials speak for themselves.</h4>
 
 		<div className='testimonials-content'>
 			<div className='testimonial' >

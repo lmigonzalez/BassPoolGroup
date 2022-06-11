@@ -1,0 +1,31 @@
+
+
+footer{
+	padding: 2rem 1rem;
+	background-color: #47B5FF;
+
+}
+
+
+.footer-nav{
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+
+hr{
+	margin: 2rem 0;
+}
+
+.nav-links{
+	margin:  0 auto;
+}
+
+.footer-nav a{
+	color: #000;
+
+}
+
+.footer-contact a{
+	color: #F32424;
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Gallery.css'
 
-import pic from '../img/pic.jpg'
+import pic from '../../img/pic.jpg'
 
 
 function Gallery() {
