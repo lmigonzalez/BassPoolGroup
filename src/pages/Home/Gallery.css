@@ -22,3 +22,16 @@
 	width:30%;
 	margin: 0.2rem;
 }
+
+.gallery-container button{
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+	background-color: #47B5FF;
+	color: #fff;
+	font-size: 1.5rem;
+	border-style: none;
+}
+
+.gallery-container button:hover, .gallery-container button:focus{
+	background-color: #47B5FF;
+}

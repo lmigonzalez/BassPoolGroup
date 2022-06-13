@@ -17,7 +17,6 @@
 
 .steps img{
 	width: 15rem;
-	width: 18rem;
 	margin: 0 1rem;
 
 }
@@ -44,4 +43,13 @@
 .step-two .step-img{
 	display: flex;
 	justify-content: flex-start;
+}
+
+
+@media (max-width: 750px){
+	.steps img{
+		width: 80%;
+		margin: 0 1rem;
+	
+	}
 }

@@ -44,3 +44,21 @@ hr{
 	text-decoration: none;
 	color: #fff;
 }
+
+@media (max-width: 650px){
+	.footer-nav li{
+		font-size: 1rem;
+	  }
+}
+
+@media (max-width: 530px){
+	.footer-nav li{
+		font-size: 0.8rem;
+	  }
+}
+
+@media (max-width: 480px){
+	.footer-nav li{
+		font-size: 0.5rem;
+	  }
+}

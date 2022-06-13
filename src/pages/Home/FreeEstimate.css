@@ -7,11 +7,12 @@
 
 .estimate-content button{
 	padding: 0.5rem 1rem;
-	background-color: #F32424;
+	background-color: #47B5FF;
 	color: #fff;
 	font-size: 1.5rem;
+	border-style: none;
 }
 
 .estimate-content button:hover, .estimate-content button:focus{
-	background-color: #F32424;
+	background-color: #47B5FF;
 }

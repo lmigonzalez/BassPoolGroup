@@ -44,12 +44,13 @@
 
 .hero-content button{
 	padding: 0.5rem 1rem;
-	background-color: #F32424;
+	background-color: #06283D;
 	color: #fff;
 	font-size: 1.5rem;
+	border-style: none;
 }
 
 .hero-content button:hover, .hero-content button:focus{
-	background-color: #F32424;
+	background-color: #06283D;
 }
 

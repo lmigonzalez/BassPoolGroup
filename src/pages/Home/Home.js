@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Home.css'
+
 import Hero from './Hero'
 import FreeEstimate from './FreeEstimate'
 import Gallery from './Gallery'

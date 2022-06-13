@@ -1,0 +1,15 @@
+
+
+.aboutus-container{
+	margin: 0 auto;
+	margin-top: 5rem;
+	padding: 2rem 1rem;
+	max-width: 1200px;
+	text-align: start;
+}
+.aboutus-container h1{
+	text-align: center;
+}
+.aboutus-container img{
+	width: 100%;
+}

@@ -41,3 +41,18 @@ nav{
 	text-decoration: none;
 	color: #fff;
 }
+
+.hamburger-menu{
+	display: none;
+}
+
+
+@media (max-width: 920px){
+	.hamburger-menu{
+		display: inline;
+		font-size: 2rem;
+	}
+	.nav-links{
+		display: none;
+	}
+}

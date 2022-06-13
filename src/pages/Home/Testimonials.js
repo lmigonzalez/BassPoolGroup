@@ -35,7 +35,6 @@ function Testimonials() {
 	const [value, setValue] = useState(testimonials[num])
 
 	const nextTestimonial = () =>{
-		console.log(num)
 		if(num === 2){
 			setNum(0)
 			setValue(testimonials[num])

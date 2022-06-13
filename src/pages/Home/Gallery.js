@@ -1,6 +1,10 @@
 import React from 'react'
 
 import './Gallery.css'
+import {Button} from 'react-bootstrap'
+import { AiOutlineArrowRight } from "react-icons/ai";
+
+
 
 import pic from '../../img/pic.jpg'
 
@@ -20,8 +24,8 @@ function Gallery() {
 			<img className='pics' src={pic}/>
 			<img className='pics' src={pic}/>
 			
-		
 		</div>
+	<Button>See all photos <AiOutlineArrowRight/></Button>
 	</section>
   )
 }
