@@ -7,9 +7,12 @@
 	max-width: 1200px;
 	text-align: start;
 }
-.aboutus-container h1{
+
+
+.aboutus-container h1, .aboutus-container h2{
 	text-align: center;
 }
+
 .aboutus-container img{
 	width: 100%;
 }

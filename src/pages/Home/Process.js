@@ -13,7 +13,7 @@ function Process() {
 			<div className='step-content'>
 				<h3>Step 1</h3>
 				<h3>Evaluation and Estimates</h3>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+				<p>This step consists of analyzing and finding the structure's best position, size, and design, considering the properties of your yard and the codes required by the city..</p>
 			</div>
 			<div className='step-img'>
 				<img src={Planing}/>
@@ -26,8 +26,8 @@ function Process() {
 			</div>
 			<div className='step-content'>
 				<h3>Step 2</h3>
-				<h3>Evaluation and Estimates</h3>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+				<h3>Structure Design and permits approval</h3>
+				<p>Once the decision is made on where the pool will be built and the design it will have, we will proceed to preliminary, and when the client accepts it, the plans will be submitted to the city.</p>
 			</div>
 			
 		</div>
@@ -35,8 +35,8 @@ function Process() {
 		<div className='steps step-three'>
 			<div className='step-content'>
 				<h3>Step 3</h3>
-				<h3>Evaluation and Estimates</h3>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+				<h3>Pool construction</h3>
+				<p>Once all the permits are approved, we will proceed with the pool's construction. This consists of excavation, formwork, foundation, installation of tiles, and completion of permits.</p>
 			</div>
 			<div className='step-img'>
 				<img src={Construction}/>

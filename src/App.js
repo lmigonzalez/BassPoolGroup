@@ -9,6 +9,7 @@ import GalleryPage from './pages/Gallery/GalleryPage'
 import Services from './pages/Services/Services'
 import AboutUs from './pages/AboutUs/AboutUs';
 import Contact from './pages/Contact/Contact';
+import NotFound from './pages/NotFound/NotFound';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/services' element={<Services/>}></Route>
         <Route path='/aboutus' element={<AboutUs/>}></Route>
         <Route path='/contactus' element={<Contact/>}></Route>
+        <Route path='*' element={<NotFound/>}></Route>
       </Routes>
       <Footer/>
     </div>

@@ -10,3 +10,13 @@
 .services-container h1{
 	text-align: center;
 }
+
+.services-container h3{
+	text-align: start;
+	font-size: 1.5rem;
+}
+
+.services-container h4{
+	text-align: start;
+	font-size: 1.2rem;
+}

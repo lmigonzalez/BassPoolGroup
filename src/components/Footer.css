@@ -3,8 +3,8 @@
 footer{
 	width: 100%;
 	padding: 2rem 1rem;
-	background-color: #47B5FF;
-	color: #fff;
+	background-color: #DFDFDE;
+	color: #000;
 
 }
 
@@ -26,12 +26,12 @@ hr{
 }
 
 .footer-nav a{
-	color: #fff;
+	color: #000;
 
 }
 
 .footer-contact a{
-	color: #fff;
+	color: #000;
 }
 
 .footer-nav li{
@@ -42,7 +42,7 @@ hr{
 
   .footer-nav a{
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 }
 
 @media (max-width: 650px){
