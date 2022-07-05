@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Admin.css'
 import { Form, Button } from "react-bootstrap";
 
 function Admin() {
+	const navigate = useNavigate()
 	const initialData = {
 		name: '',
 		password: '',
@@ -32,6 +34,7 @@ function Admin() {
 		.then(res=>{
 		  console.log(res.data.token)
 		  localStorage.setItem('userData', JSON.stringify({token: res.data.token}))
+		  navigate('/dashboard')
 		}).catch(err=>{
 		  console.log('ERROR')
 		})
