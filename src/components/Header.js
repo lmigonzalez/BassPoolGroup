@@ -26,7 +26,7 @@ function Header() {
 			</ul>
 			<GiHamburgerMenu className='hamburger-menu' onClick={handleToggle}/>
 		</div>
-		<div className={toggleMenu? 'mobile-menu' : 'mobile-menu active'}>
+		<div className={!toggleMenu? 'mobile-menu' : 'mobile-menu active'}>
 			<ul className='mobile-nav-links'>
 				<li> <Link to='/'>Home</Link> </li>
 				<li> <Link to='/gallery'>Gallery</Link> </li>

@@ -10,7 +10,10 @@ import Services from './pages/Services/Services'
 import AboutUs from './pages/AboutUs/AboutUs';
 import Contact from './pages/Contact/Contact';
 import NotFound from './pages/NotFound/NotFound';
+import Admin from './pages/Admin/Admin';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -23,6 +26,8 @@ function App() {
         <Route path='/aboutus' element={<AboutUs/>}></Route>
         <Route path='/contactus' element={<Contact/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
+        <Route path='/admin' element={<Admin/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
       </Routes>
       <Footer/>
     </div>

@@ -41,16 +41,7 @@ function Contact() {
     e.preventDefault()
 
 
-    axios.post('http://localhost:1337/api/user-informations', {"data":{
-     "first_name": userData.first_name,
-     "last_name": userData.last_name,
-     "email": userData.email,
-     "zip_code": userData.zip_code,
-     "phone_number": userData.phone_number,
-     "message": userData.message,
-     "spa": userData.spa,
-
-    }})
+    axios.post('http://localhost:3000/api/createmessage/', userData)
     .then(res=>{
       console.log(res)
     }).catch(err=>{
