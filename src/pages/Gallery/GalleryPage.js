@@ -11,7 +11,7 @@ function Gallery() {
   }, [])
 
   const getGallery = () =>{
-    axios.get('http://localhost:3000/api/getimages')
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/getimages`)
     .then((res)=>{
       setGallery(res.data)
 
