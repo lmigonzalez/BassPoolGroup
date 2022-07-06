@@ -43,11 +43,7 @@ function Gallery() {
               crossOrigin="anonymous"
               className="pics"
               key={pic._id}
-<<<<<<< HEAD
               src={`${process.env.REACT_APP_IMG_URL}${pic.filepath}`}
-=======
-              src={`${process.env.REACT_APP_BACKEND_URL}/${pic.filepath}`}
->>>>>>> 91271381c651803a6181903707f0c9fd5f114632
             />
           );
         })}
