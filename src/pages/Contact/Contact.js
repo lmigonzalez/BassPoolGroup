@@ -43,7 +43,7 @@ function Contact() {
     
 
 
-    axios.post('http://localhost:3000/api/createmessage/', userData)
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/createmessage/`, userData)
     .then(res=>{
       console.log(res)
     }).catch(err=>{

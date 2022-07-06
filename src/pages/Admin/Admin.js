@@ -3,8 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Admin.css'
 import { Form, Button } from "react-bootstrap";
+import {useStateContext} from '../../context/StateContext'
 
 function Admin() {
+
+	const {
+		isLogin,
+		setIsLogin,
+	} = useStateContext()
+
 	const navigate = useNavigate()
 	const initialData = {
 		name: '',
@@ -12,6 +19,7 @@ function Admin() {
 	
 	  }
 	  const [userData, setUserData] = useState(initialData)
+	
 
 	const handleChange = (e) =>{
 		setUserData({
@@ -21,7 +29,6 @@ function Admin() {
 
 	const handleSubmit = (e) =>{
 		if(localStorage.getItem('userData')){
-			// console.log('exist')
 			localStorage.removeItem('userData')
 		}
 		e.preventDefault()
@@ -30,10 +37,11 @@ function Admin() {
 			  "Content-Type": "application/json",
 			},
 		  };
-		axios.post('http://localhost:3000/api/login', userData, config)
+		axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, userData, config)
 		.then(res=>{
-		  console.log(res.data.token)
+
 		  localStorage.setItem('userData', JSON.stringify({token: res.data.token}))
+		  setIsLogin(true)
 		  navigate('/dashboard')
 		}).catch(err=>{
 		  console.log('ERROR')
@@ -48,9 +56,7 @@ function Admin() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="required">Name</Form.Label>
           <Form.Control type="text" name='name' value={userData.name} onChange={handleChange}/>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label className="required">Password</Form.Label>
+          <Form.Label className="required mt-3">Password</Form.Label>
           <Form.Control type="password" name='password' value={userData.password} onChange={handleChange}/>
         </Form.Group>
 		<Button type="submit">Submit</Button>

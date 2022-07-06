@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StateContext } from './context/StateContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <StateContext>
+        <App />
+      </StateContext>
     </React.StrictMode>
   </BrowserRouter>
 );

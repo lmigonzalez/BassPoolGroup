@@ -14,6 +14,8 @@ import Admin from './pages/Admin/Admin';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Footer from './components/Footer';
 
+import { RequiredAuth } from './ProtectedPage/ProtectedPage';
+
 
 function App() {
   return (
@@ -27,7 +29,16 @@ function App() {
         <Route path='/contactus' element={<Contact/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
         <Route path='/admin' element={<Admin/>}></Route>
-        <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route
+          path='/dashboard'
+          element={
+            <RequiredAuth redirectTo='/'>
+              <Dashboard/>
+            </RequiredAuth>
+          }
+        >
+        </Route>
+          {/* <Route path='/dashboard' element={<Dashboard/>}></Route> */}
       </Routes>
       <Footer/>
     </div>

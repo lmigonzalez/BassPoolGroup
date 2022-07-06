@@ -3,7 +3,6 @@ import axios from "axios";
 
 import "./GalleryPage.css";
 
-import photos from "../../img/pic.jpg";
 
 function Gallery() {
   const [gallery, setGallery] = useState([])
@@ -15,7 +14,6 @@ function Gallery() {
     axios.get('http://localhost:3000/api/getimages')
     .then((res)=>{
       setGallery(res.data)
-      console.log(gallery)
 
     }).catch((err)=>{
       console.log(err)
