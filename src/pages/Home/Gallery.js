@@ -14,6 +14,8 @@ function Gallery() {
   }, []);
 
 
+  console.log(process.env.REACT_APP_BACKEND_URL)
+
   const getGallery = () => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/getimages`)
