@@ -43,7 +43,7 @@ function Gallery() {
               crossOrigin="anonymous"
               className="pics"
               key={pic._id}
-              src={`http://localhost:3000${pic.filepath}`}
+              src={`${process.env.REACT_APP_BACKEND_URL}/${pic.filepath}`}
             />
           );
         })}
