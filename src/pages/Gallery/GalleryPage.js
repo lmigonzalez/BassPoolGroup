@@ -11,7 +11,7 @@ function Gallery() {
   }, [])
 
   const getGallery = () =>{
-    axios.get('http://localhost:3000/api/getimages')
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/getimages`)
     .then((res)=>{
       setGallery(res.data)
 
@@ -27,7 +27,7 @@ function Gallery() {
         {
           gallery.map((pic)=>{
             return(
-              <img crossOrigin="anonymous" className="pics" key={pic._id} src={`http://localhost:3000${pic.filepath}`} />
+              <img crossOrigin="anonymous" className="pics" key={pic._id} src={`${process.env.REACT_APP_IMG_URL}${pic.filepath}`} />
             
             )
           })
