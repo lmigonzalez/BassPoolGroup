@@ -20,13 +20,43 @@ form{
 	color: #F32424;
 }
 
-.form-container button{
+.btn-container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+}
+
+.btn-container .success-message{
+	color: green;
+	text-align: center;
+}
+
+.btn-container .error-message{
+	color: red;
+	text-align: center;
+}
+
+.success-message.inactive, .error-message.inactive{
+	display: none;
+}
+
+.check-icon {
+	font-size: 1.5rem;
+}
+
+.btn-container button{
 	padding: 0.5rem 1rem;
 	background-color: #333C83;
 	color: #fff;
 	font-size: 1.5rem;
 	border-style: none;
+	width: 100%;
+	
 }
+
+
 
 .form-container button:hover, .form-container button:focus{
 	background-color: #47B5FF;
