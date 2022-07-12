@@ -37,7 +37,7 @@ function Gallery() {
     <section className="gallery-container">
       <h2>Gallery</h2>
       <div className="pics-section">
-        {gallery.length > 1 && gallery.slice(0, 9).map((pic) => {
+        {gallery.length >= 1 && gallery.slice(0, 9).map((pic) => {
           return (
             <img
               crossOrigin="anonymous"

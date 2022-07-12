@@ -25,7 +25,7 @@ function Gallery() {
       <h1>Gallery</h1>
       <div className="pics-section">
         {
-         gallery.length > 1 && gallery.map((pic)=>{
+         gallery.length >= 1 && gallery.map((pic)=>{
             return(
               <img crossOrigin="anonymous" className="pics" key={pic._id} src={`${process.env.REACT_APP_IMG_URL}${pic.filepath}`} />
             
