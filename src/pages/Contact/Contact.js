@@ -137,7 +137,7 @@ function Contact() {
     
 
 
-    axios.post(`http://localhost:3001/api/createmessage`, userData)
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/createmessage`, userData)
     .then(res=>{
       setSentSuccess(true)
       closeSuccessMessage()
