@@ -44,6 +44,7 @@ function Gallery() {
               className="pics"
               key={pic._id}
               src={`${process.env.REACT_APP_IMG_URL}${pic.filepath}`}
+              alt='pic'
             />
           );
         })}

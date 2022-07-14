@@ -27,7 +27,7 @@ function Gallery() {
         {
          gallery.length >= 1 && gallery.map((pic)=>{
             return(
-              <img crossOrigin="anonymous" className="pics" key={pic._id} src={`${process.env.REACT_APP_IMG_URL}${pic.filepath}`} />
+              <img crossOrigin="anonymous" className="pics" key={pic._id} src={`${process.env.REACT_APP_IMG_URL}${pic.filepath}`} alt='pic' />
             
             )
           })
