@@ -14,6 +14,7 @@ function Gallery() {
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/getimages`)
     .then((res)=>{
       setGallery(res.data)
+      console.log(res.data)
 
     }).catch((err)=>{
       console.log(err)
@@ -27,7 +28,7 @@ function Gallery() {
         {
          gallery.length >= 1 && gallery.map((pic)=>{
             return(
-              <img crossOrigin="anonymous" className="pics" key={pic._id} src={`${process.env.REACT_APP_IMG_URL}${pic.filepath}`} alt='pic' />
+              <img crossOrigin="anonymous" className="pics" key={pic._id} src={`${process.env.REACT_APP_BACKEND_URL}/images/${pic.filename}`} alt='pic' />
             
             )
           })
