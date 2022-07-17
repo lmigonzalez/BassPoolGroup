@@ -40,12 +40,12 @@ function Gallery() {
         {gallery.length >= 1 && gallery.slice(0, 9).map((pic) => {
           return (
             <img
-              crossOrigin="anonymous"
-              className="pics"
-              key={pic._id}
-              src={`${process.env.REACT_APP_IMG_URL}${pic.filepath}`}
-              alt='pic'
-            />
+            crossOrigin="anonymous"
+            className="pics"
+            key={pic._id}
+            src={`${process.env.REACT_APP_BACKEND_URL}/images/${pic.filename}`}
+            alt="pic"
+          />
           );
         })}
       </div>
