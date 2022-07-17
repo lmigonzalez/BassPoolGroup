@@ -4,17 +4,22 @@ import axios from "axios";
 import "./GalleryPage.css";
 
 function Gallery() {
+  const [fullWidth, setFullWidth] = useState(false)
   const [gallery, setGallery] = useState([]);
   useEffect(() => {
     getGallery();
   }, []);
+
+  const expandPic = () =>{
+    setFullWidth(!fullWidth)
+  }
 
   const getGallery = () => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/getimages`)
       .then((res) => {
         setGallery(res.data);
-        console.log(res.data);
+
       })
       .catch((err) => {
         console.log(err);
@@ -29,8 +34,10 @@ function Gallery() {
           gallery.map((pic) => {
             return (
               <img
+                onClick={() => expandPic()}
                 crossOrigin="anonymous"
-                className="pics"
+                className={fullWidth? 'pics' : 'big-pic'}
+                // className={fullWidth? 'pic' : 'big-pic'}
                 key={pic._id}
                 src={`${process.env.REACT_APP_BACKEND_URL}/images/${pic.filename}`}
                 alt="pic"
