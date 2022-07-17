@@ -6,6 +6,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .pics-section{
@@ -24,8 +25,27 @@
 }
 
 .big-pic{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
-	margin: 1rem 0;
+	height: 100vh;
+	z-index: 100;
+	overflow-y: hidden;
+	background-color: rgba(94, 89, 91, 0.95);
+	position: fixed;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.big-pic img{
+	width: 100%;
+}
+
+.big-pic.hidden{
+	display: none;
 }
 
 .gallery-container button{

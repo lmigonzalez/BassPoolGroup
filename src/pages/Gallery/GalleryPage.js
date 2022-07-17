@@ -4,22 +4,29 @@ import axios from "axios";
 import "./GalleryPage.css";
 
 function Gallery() {
-  const [fullWidth, setFullWidth] = useState(false)
+  const [fullWidth, setFullWidth] = useState(false);
   const [gallery, setGallery] = useState([]);
+  const [bigImageUrl, setBigImageUrl] = useState("");
   useEffect(() => {
     getGallery();
   }, []);
 
-  const expandPic = () =>{
-    setFullWidth(!fullWidth)
-  }
+  const expandPic = (e) => {
+    setFullWidth(!fullWidth);
+    setBigImageUrl(e.filename);
+    console.log(e);
+  };
+
+  const closeImage = () => {
+    setFullWidth(false);
+    setBigImageUrl("");
+  };
 
   const getGallery = () => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/getimages`)
       .then((res) => {
         setGallery(res.data);
-
       })
       .catch((err) => {
         console.log(err);
@@ -34,16 +41,23 @@ function Gallery() {
           gallery.map((pic) => {
             return (
               <img
-                onClick={() => expandPic()}
+                onClick={() => expandPic(pic)}
                 crossOrigin="anonymous"
-                className={fullWidth? 'pics' : 'big-pic'}
-                // className={fullWidth? 'pic' : 'big-pic'}
+                className="pics"
                 key={pic._id}
                 src={`${process.env.REACT_APP_BACKEND_URL}/images/${pic.filename}`}
                 alt="pic"
               />
             );
           })}
+      </div>
+      <div className={fullWidth ? "big-pic" : "big-pic hidden"} onClick={closeImage}>
+        <img
+          crossOrigin="anonymous"
+          src={`${process.env.REACT_APP_BACKEND_URL}/images/${bigImageUrl}`}
+          alt="pic"
+          
+        />
       </div>
     </section>
   );
