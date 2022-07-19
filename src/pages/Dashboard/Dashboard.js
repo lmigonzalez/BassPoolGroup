@@ -92,7 +92,7 @@ function Dashboard() {
 
 
     axios
-      .post(`http://localhost:3001/api/uploadimg`, formData, config)
+      .post(`${process.env.REACT_APP_BACKEND_URL}/uploadimg`, formData, config)
       .then((res) => {
 		setSuccessfullySubmitted(true)
         setFile('')
