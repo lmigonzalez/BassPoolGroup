@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Spinner from "../../components/Spinner";
 
 import "./GalleryPage.css";
 
@@ -37,8 +38,8 @@ function Gallery() {
     <section className="gallerypage-container">
       <h1>Gallery</h1>
       <div className="pics-section">
-        {gallery.length >= 1 &&
-          gallery.map((pic) => {
+        {
+          gallery.length <=0 ? <Spinner/> : gallery.map((pic) => {
             return (
               <img
                 onClick={() => expandPic(pic)}
@@ -49,7 +50,9 @@ function Gallery() {
                 alt="pic"
               />
             );
-          })}
+          })
+        }
+      
       </div>
       <div className={fullWidth ? "big-pic" : "big-pic hidden"} onClick={closeImage}>
         <img

@@ -1,0 +1,50 @@
+.spinner-content{
+	/* position: absolute;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -50%); */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 15rem;
+
+	
+}
+
+.spinner{
+	background-color: #DFDFDE;
+
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	
+}
+
+
+.spinner1{
+	animation: spinner1 3s infinite;
+}
+
+.spinner2{
+	animation: spinner1 3s 0.5s infinite;
+}
+
+.spinner3{
+	animation: spinner1 3s 1s infinite;
+}
+
+.spinner4{
+	animation: spinner1 3s 1.5s infinite;
+}
+
+@keyframes spinner1{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(0.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}

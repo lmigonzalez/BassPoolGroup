@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Gallery.css";
 import { Button } from "react-bootstrap";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Spinner from "../../components/Spinner";
 
 function Gallery() {
   const [gallery, setGallery] = useState([]);
@@ -12,6 +13,7 @@ function Gallery() {
   useEffect(() => {
     getGallery();
   }, []);
+
 
 
   console.log(process.env.REACT_APP_BACKEND_URL)
@@ -37,17 +39,20 @@ function Gallery() {
     <section className="gallery-container">
       <h2>Gallery</h2>
       <div className="pics-section">
-        {gallery.length >= 1 && gallery.slice(0, 9).map((pic) => {
-          return (
-            <img
-            crossOrigin="anonymous"
-            className="pics"
-            key={pic._id}
-            src={`${process.env.REACT_APP_BACKEND_URL}/images/${pic.filename}`}
-            alt="pic"
-          />
-          );
-        })}
+        {
+         gallery.length <= 0 ? <Spinner/> : gallery.slice(0, 9).map((pic) => {
+            return (
+              <img
+              crossOrigin="anonymous"
+              className="pics"
+              key={pic._id}
+              src={`${process.env.REACT_APP_BACKEND_URL}/images/${pic.filename}`}
+              alt="pic"
+            />
+            );
+          })
+        }
+        
       </div>
       <Button onClick={goToGalleryPage}>
         See all photos <AiOutlineArrowRight />
